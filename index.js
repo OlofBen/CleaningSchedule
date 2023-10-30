@@ -6,9 +6,9 @@ const duty = ['Toa', 'Sopor', 'Golv']
 
 //code from https://www.geeksforgeeks.org/calculate-current-week-number-in-javascript/
 const currentDate = new Date();
-const startDate = new Date(currentDate.getFullYear(), 0, 1);
+const startDate = new Date(currentDate.getFullYear(), 0, 1)
 const days = Math.floor((currentDate - startDate) /
-    (24 * 60 * 60 * 1000));
+    (24 * 60 * 60 * 1000)) - 1 //minus one because we end the week on monday
  
 const week = Math.ceil(days / 7);
 
