@@ -2,7 +2,7 @@ const hjalmar = document.getElementById('Hjalmar')
 const pontus = document.getElementById('Pontus')
 const olof = document.getElementById('Olof')
 
-const duty = ['Toa', 'Sopor', 'Golv']
+const duty = ['Toa',  'Golv', 'Sopor']
 
 //code from https://www.geeksforgeeks.org/calculate-current-week-number-in-javascript/
 const currentDate = new Date();
@@ -12,8 +12,8 @@ const days = Math.floor((currentDate - startDate) /
  
 const week = Math.ceil(days / 7);
 
-hjalmar.appendChild(createDuty(duty[week % 3]))
-pontus.appendChild(createDuty(duty[(week + 1) % 3]))
+hjalmar.appendChild(createDuty(duty[(week + 1) % 3]))
+pontus.appendChild(createDuty(duty[week % 3]))
 olof.appendChild(createDuty(duty[(week + 2) % 3]))
 
 
